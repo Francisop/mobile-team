@@ -1,4 +1,5 @@
-# covid19
+# login and Splash screen
+I contributed to the building of the login and splash screen of team fury mobile app
 
 A new Flutter project.
 
