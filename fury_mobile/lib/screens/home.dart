@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
     _requestIOSPermissions();
     _configureDidReceiveLocalNotificationSubject();
     _configureSelectNotificationSubject();
-    //checkname();
+    checkname();
     //setPref();
   }
 
@@ -221,18 +221,13 @@ class _HomePageState extends State<HomePage> {
                                     _formKey.currentState.save();
                                     print('valid');
 
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => ReminderSet(),
-                                      ),
-                                    );
+                                
                                     // Navigate to dashboard
-                                    /* Navigator.of(context).pushAndRemoveUntil(
+                                     Navigator.of(context).pushAndRemoveUntil(
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                SecondScreen()),
-                                        (Route<dynamic> route) => false); */
+                                                ReminderSet()),
+                                        (Route<dynamic> route) => false); 
                                   }
                                 },
                                 child: Text(

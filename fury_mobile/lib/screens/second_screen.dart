@@ -20,6 +20,7 @@ class SecondScreenState extends State<SecondScreen> {
   setPref() async {
     prefs = await SharedPreferences.getInstance();
   }
+  
 
   @override
   void initState() {
@@ -55,18 +56,18 @@ class SecondScreenState extends State<SecondScreen> {
                     body:
                         "${prefs.getString('name')} it's time to wash your hands");
 
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => SecondRoute(),
-                  ),
-                );
+                  Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(builder: (context) => SecondRoute()),
+          (Route<dynamic> route) => false);
               }),
         ),
       ),
     );
   }
 }
+
+
+
 
 class SecondRoute extends StatelessWidget {
   @override
